@@ -1,0 +1,205 @@
+body{
+  background: rgb(229, 229, 229) !important;
+}
+
+h2{
+  /* text-align: center; */
+}
+
+.container{
+  background: white;
+  width: 1050px !important;
+}
+
+#chart {
+  width: 100%;
+  /* height: 506px; */
+}
+
+.dot {
+  stroke: #000;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.label {
+  fill: #777;
+}
+
+.year.label {
+  font-size: 96px;
+  fill: #ddd;
+}
+
+.year.label.active {
+  fill: #aaa;
+}
+
+.overlay {
+  fill: none;
+  pointer-events: all;
+  cursor: ew-resize;
+}
+.ui-corner-all{
+  border-radius: 0px;
+}
+.ui-slider-handle{
+  border: 1px solid grey !important;
+  cursor: pointer !important;
+  border-radius: 0!important;
+  background: rgb(255, 255, 255) !important;
+}
+.sliderHolder{
+  margin-left: 40px;
+  height: 200px;
+  width: 945px;
+}
+
+.legenda{
+  margin: 10px 0px 0px 0px;
+  padding: 10px 0px 5px 10px;
+  background: #EFEFEF;
+  font-size: 12px;
+  /* width: 200px; */
+}
+
+ul{
+  list-style: none;
+}
+
+ul li{
+  /* width: 100%; */
+  margin: 3px 30px 0px 13px;
+  display: inline-block;
+}
+
+ul li svg{
+  float: left;
+  display: inline-block;
+}
+
+ul li h3{
+  float: left;
+  margin: 0px 0px 0px 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  display: inline-block;
+}
+
+.labels{
+  width: 1025px;
+  margin-left: -41px;
+  margin-top: 10px;
+}
+
+.labels label{
+  width: 10%;
+  display: inline-block;
+  text-align: center;
+  float: left;
+}
+
+.sliderHolder #yearSlider{
+  position: relative;
+  /* overflow: hidden; */
+}
+
+#yearSlider label {
+  position: absolute;
+  width: 50px;
+  margin-top: 20px;
+  /* text-align: center; */
+  margin-left: -25px;
+  text-align: center;
+  font-weight: 100;
+}
+
+input[type="range"]{
+    background: white;
+    width: 130px;
+    height: 16px;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border:1px solid #aaa;    
+    -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+    -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+}
+/*
+input[type="range"]:hover{
+    background: rgb(194, 139, 131);
+    width: 130px;
+    height: 6px;
+    -webkit-appearance: none;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -webkit-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+    -moz-box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+    box-shadow: inset 0px 0px 1px 1px rgba(0, 0, 0, 0.9), 0px 1px 1px 0px rgba(255, 255, 255, 0.13);
+}*/
+
+input[type="range"]::-webkit-slider-thumb{
+  cursor: pointer;
+   -webkit-appearance:none !important;  
+   width:25px;
+   height:25px;
+   -webkit-appearance: none;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    background-color: #ccc;
+    border:1px solid #aaa;    
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+ }
+
+input[type="range"]::-webkit-slider-thumb:hover{
+  cursor: pointer;
+   -webkit-appearance:none !important;  
+   width:25px;
+   height:25px;
+   -webkit-appearance: none;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    background-color: #ccc;
+    border:1px solid black;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+ }
+
+.tooltip{
+  position: absolute;
+  z-index: 1070;
+  display: block;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 12px;
+  background: white;
+  padding: 4px 6px;
+  font-weight: 400;
+  border: 1px solid black;
+  line-height: 1.4;
+  visibility: visible;
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.tooltip span{
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
